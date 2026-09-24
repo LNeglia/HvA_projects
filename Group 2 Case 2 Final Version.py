@@ -266,9 +266,7 @@ fig = px.histogram(
     title=f"IMDb-scoreverdeling voor {genre_keuze}"
 )
 
-fig.update_traces(
-    xbins=dict(start=0, end=10, size=0.5)
-)
+fig.update_traces(xbins=dict(start=0, end=10, size=0.5), marker_line_color="black", marker_line_width=1)
 
 st.plotly_chart(fig, use_container_width=True)
 
@@ -307,7 +305,7 @@ figGenre = px.bar(x = genre_counts.index,
                   labels = {"x": "Genre", "y": "Count"}, 
                   color = genre_counts.index, 
                   title = "Genreverdeling van media")
-figGenre.update_traces(width=0.8)
+figGenre.update_traces(width=0.8, marker_line_color="black", marker_line_width=1)
 st.plotly_chart(figGenre, use_container_width=True)
 
 with st.expander("""Grafiek: "Genreverdeling van media" conclusie""", expanded=True):
@@ -341,7 +339,7 @@ fig = px.histogram(genre_data, x = "imdb_score", range_x = [0, 10], color = "typ
     category_orders = {"genre": genre_data["genre"].sort_values(),"type": ["MOVIE", "SHOW"]},title = "IMDb-scoreverdeling per genre en type")
 
 # Each x axis range set [0, 10], forced to be set with bins of 0.5 -> Guarantees consistent x axis among all graphs.
-fig.update_traces(xbins = dict(start = 0, end = 10, size = 0.5))
+fig.update_traces(xbins = dict(start = 0, end = 10, size = 0.5), marker_line_color="black", marker_line_width=1)
 
 # Independent axis scales
 fig.update_yaxes(matches = None)
