@@ -17,7 +17,6 @@ st.title("Group 2: Case 2 - Netflix IMDb vergelijking Dashboard")
 
 
 st.header("Deel 1: Inleiding")
-st.button("Rerun", key="rerun_1")
 with st.expander("Doel een Onderzoeksvraag van taak", expanded=True):
     st.markdown("""
     In dit dashboard onderzoeken we hoe verschillende genres op Netflix
@@ -94,7 +93,7 @@ imdb = imdb.drop(columns = ["title", "release_year"])
 imdb.insert(0, "title_release_year", imdb.pop("title_release_year"))
 
 st.header("Deel 2: Datasets filteren")
-st.button("Rerun", key="rerun_2")
+
 with st.expander("Welke kolommen te kiezen?", expanded=True):
     st.markdown("""
     De kolommen die we voor elke dataset hebben gekozen, zijn "`title`", "`release_year`", "`type`" en de relevante kolom die we willen vergelijken.
@@ -251,7 +250,7 @@ elif alleen_shows and not alleen_films:
 
 
 st.header("Deel 3: Visueel data bestuderen")
-st.button("Rerun", key="rerun_3")
+
 
 # Grafiek
 with st.expander("Dataset filteren en door grafieken bestuderen", expanded=True):
@@ -371,7 +370,6 @@ with st.expander("Tabel met de gemiddelde score en het totaal aantal per genre, 
 # %%
 #conclusie
 st.header("Deel 4: Conclusies")
-st.button("Rerun", key="rerun_4")
 
 
 with st.expander("Conclusie 1: Steekproefomvang verschillen en het effect dat dit kan hebben", expanded=True):
