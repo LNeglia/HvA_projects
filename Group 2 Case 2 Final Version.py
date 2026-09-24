@@ -366,7 +366,7 @@ mean_count_scores = genre_data.pivot_table(
 
 with st.expander("Tabel met de gemiddelde score en het totaal aantal per genre, per type", expanded=True):
     st.write("Om de spreidingen van de grafieken beter te kunnen analyseren, hebben we een `pivot_table()` gemaakt met de gemiddelde scores en hun counts per subplot.")
-    st.write(mean_count_scores, width="stretch")
+    st.write(mean_count_scores)
     
 
 
