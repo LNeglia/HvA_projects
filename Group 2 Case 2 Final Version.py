@@ -102,7 +102,7 @@ with st.expander("Welke kolommen te kiezen?", expanded=True):
     """)
 
 with st.expander("Welke kolommen te kiezen?", expanded=True):
-    st.write("""De volgende stap voor elk dataframe is het samenvoegen ervan. Omdat er al eerder media met dezelfde titel zijn geweest, houden we hier rekening mee door de kolommen "`title`" en "`release_year`" samen te voegen tot een nieuwe kolom, 'titel_uitgavejaar'.
+    st.write("""De volgende stap voor elk dataframe is het samenvoegen ervan. Omdat er al eerder media met dezelfde titel zijn geweest, houden we hier rekening mee door de kolommen "`title`" en "`release_year`" samen te voegen tot een nieuwe kolom, "`title_release_year`".
         Zodra deze nieuwe kolom is aangemaakt, plaatsen we deze vooraan in het dataframe en verwijderen we de oorspronkelijke kolommen "`title`" en "`release_year`". Dit resulteert in een overzichtelijke lay-out van "`title_release_year`" voor elk item.
         """)
     st.write("""Vervolgens ziet de `.head()` van elk dataframe er als volgt uit:""")
